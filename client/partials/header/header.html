@@ -69,9 +69,9 @@
 <div class="container header-submitPost" ng-show="vs.ToggleMovieForm">
     <h3>Add A New Movie</h3>
 
-    <form name="form" novalidate ng-submit="form.$valid && newPost()">
+    <form name="form" novalidate ng-submit="form.$valid && newMovie()">
         <div class="form-group" ng-class="{'has-error': form.title.$invalid && form.title.$touched}">
-            <input ng-model="post.title"
+            <input ng-model="movie.title"
                    placeholder="Movie Title"
                    name="title"
                    type="text"

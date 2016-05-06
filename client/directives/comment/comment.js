@@ -4,7 +4,7 @@ angular.module('omdbMovieApp').directive('comment', function() {
         replace: true,
         templateUrl: '/directives/comment/comment.html',
         link: function(scope, element, attrs, fn) {
-            scope.comments = scope.post.comments;
+            scope.comments = scope.movie.comments;
         },
         controller: function ($scope, $timeout, movieDataService) {
             $scope.vs = {};
@@ -14,9 +14,9 @@ angular.module('omdbMovieApp').directive('comment', function() {
             $scope.vs.comments = false;
 
             $scope.addComment = function (movieId, formComment) {
-                var post = movieDataService.movieById(movieId);
+                var movie = movieDataService.movieById(movieId);
                 var commentCopy = angular.copy(formComment);
-                post.comments.push(commentCopy);
+                movie.comments.push(commentCopy);
                 $scope.form.$setPristine();
                 $scope.form.$setUntouched();
                 $scope.comment = {};

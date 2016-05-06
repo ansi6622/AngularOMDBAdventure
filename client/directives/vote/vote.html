@@ -1,0 +1,14 @@
+<span>
+    <i ng-click="fn.upVote(VoteCtrl.movie.id)"
+       class="fa fa-arrow-up movie-vote"
+       aria-hidden="true"></i>
+
+    <i ng-click="fn.downVote(VoteCtrl.movie.id)"
+       class="fa fa-arrow-down movie-vote"
+       aria-hidden="true"></i>
+
+    <span ng-class="{ 'movie-positive': VoteCtrl.movie.votes > 0,
+                      'movie-negative': VoteCtrl.movie.votes < 0 }">
+        {{VoteCtrl.movie.votes}}
+    </span>
+</span>
