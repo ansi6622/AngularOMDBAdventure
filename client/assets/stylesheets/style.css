@@ -26,7 +26,21 @@ body > div {
   border-radius: 15px;
   background-color: rgba(200,230,250,.8);
 }
-
+#circle {
+  border-radius: 50%;
+  color: black;
+  background-color: rgba(50, 80, 105, .6);
+  text-shadow: 2px 2px 2px #EEEEEE;
+  text-align: center;
+  margin-top: 1em;
+}
+#comment {
+  padding: 1em;
+  height: 50%;
+  width: 50%;
+  display: inline-block;
+    margin: 2px;
+}
 .lilspaces{
   color: white;
   margin-top: 4em;
@@ -64,14 +78,17 @@ body > div {
 }
 
 .comment-li-wrapper {
-  background: white;
+  background: rgba(0, 0, 0, 0.2);;
   list-style: none;
   padding: 5px;
   margin: 5px 0;
+  border-radius: 20px;
+  text-align: center;
+
 }
 
 .comment-li-wrapper .comment-author {
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .comment-header {

@@ -1,3 +1,4 @@
+
 <div class="comment">
   <button class="btn btn-xs btn-default" ng-click="vs.comments = !vs.comments">
     <i class="fa fa-comments-o" aria-hidden="true"></i> {{movie.comments.length}}
@@ -6,7 +7,7 @@
 
   <button class="btn btn-xs btn-default" ng-click="vs.form = !vs.form">
     <i class="fa fa-keyboard-o" aria-hidden="true"></i>
-    <span>Add Comment</span>
+    <span> <em> Add Comment</em></span>
   </button>
 
   <ul ng-show="vs.comments" class="comment-ul-wrapper">
@@ -16,12 +17,13 @@
       <div class="comment-body">{{comment.body}}</div>
     </li>
     <div ng-hide="commentCount.length > 0">
-      No one has commented on this movie.
+      Nobody Tells Me Nothin'
     </div>
   </ul>
 
 
-  <form name="form" novalidate ng-submit="form.$valid && addComment(movie.id, comment)" ng-show="vs.form">
+  <div id="circle">
+  <form id="comment" name="form" novalidate ng-submit="form.$valid && addComment(movie.id, comment)" ng-show="vs.form">
     <h3 class="comment-header">Add A Comment</h3>
 
     <div class="form-group" ng-class="{'has-error': form.author.$invalid && form.author.$touched}">
@@ -52,4 +54,5 @@
 
   </form>
 
+</div>
 </div>
