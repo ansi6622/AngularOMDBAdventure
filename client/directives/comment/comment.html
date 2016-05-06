@@ -1,0 +1,56 @@
+<div class="comment">
+  <button class="btn btn-xs btn-default" ng-click="vs.comments = !vs.comments">
+    <i class="fa fa-comment-o" aria-hidden="true"></i> {{movie.comments.length}}
+    <ng-pluralize count="movie.comments.length" when="{'1': 'Comment', 'other': 'Comments'}"></ng-pluralize>
+  </button>
+
+  <button class="btn btn-xs btn-default" ng-click="vs.form = !vs.form">
+    <i class="fa fa-pencil" aria-hidden="true"></i>
+    <span>Add Comment</span>
+  </button>
+
+
+  <ul ng-show="vs.comments" class="comment-ul-wrapper">
+    <h3 class="comment-header">Comments</h3>
+    <li ng-repeat="comment in commentCount = (comments)" class="comment-li-wrapper">
+      <div class="comment-author">{{comment.author}}</div>
+      <div class="comment-body">{{comment.body}}</div>
+    </li>
+    <div ng-hide="commentCount.length > 0">
+      No one has commented on this movie.
+    </div>
+  </ul>
+
+
+  <form name="form" novalidate ng-submit="form.$valid && addComment(movie.id, comment)" ng-show="vs.form">
+    <h3 class="comment-header">Add A Comment</h3>
+
+    <div class="form-group" ng-class="{'has-error': form.author.$invalid && form.author.$touched}">
+      <input ng-model="comment.author"
+             placeholder="Author Name"
+             type="text"
+             name="author"
+             class="form-control"
+             minlength="2"
+             maxlength="50"
+             required>
+       <span ng-show="form.author.$invalid && form.author.$touched">Author is invalid.</span>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error': form.body.$invalid && form.body.$touched}">
+      <textarea ng-model="comment.body"
+                placeholder="Comment"
+                name="body"
+                class="form-control"
+                minlength="10"
+                required></textarea>
+     <span ng-show="form.body.$invalid && form.body.$touched">Comment is invalid.</span>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-xs btn-primary" type="submit" name="button">Save Comment</button>
+    </div>
+
+  </form>
+
+</div>
