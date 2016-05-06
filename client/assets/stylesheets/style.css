@@ -1,27 +1,45 @@
+
+body > div {
+  background-color: rgba(50, 80, 105, .9);
+  font-family: 'Poiret One', cursive;
+}
+
 .movies-image {
   width: 20em;
   border-radius: 15px;
 }
-
+.movies{
+  margin-top: 5em;
+}
 #rounded {
+  margin-top: 1em;
   margin-right: 2em;
   margin-left: 2em;
   border-radius: 15px;
+  background-color: rgba(150,200,250,.8);
+  text-shadow: 2px 2px 2px rgba(200,230,250,.8);
 }
 #roundmovie {
+  margin-top: 2em;
   margin-right: 2em;
   margin-left: 2em;
   border-radius: 15px;
+  background-color: rgba(200,230,250,.8);
 }
 
 .lilspaces{
-  margin-bottom: 5em;
+  color: white;
+  margin-top: 4em;
+  margin-bottom: 0em;
+  margin-left: 5em;
+  margin-right: 5em;
+  background-color: rgba(0,0,0,.6);
+  border-radius: 15px;
 }
 
 .header-submitMovie {
-  transition: .15s linear;
-  margin-top: -10px;
-  margin-bottom: 20px;
+  transition: .4s linear;
+  margin-top: 5em;
   z-index: -1;
 }
 
@@ -30,9 +48,10 @@
 }
 
 .header-active, .header-favorite, .movies-favorite {
-  color: rgb(75, 101, 193);
+  color: rgba(75, 100, 250,.5);
   opacity: 1;
   cursor: pointer;
+  text-shadow: 2px 2px 2px #EEEEEE;
 }
 
 .comment {
@@ -68,11 +87,16 @@
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 10px;
-  background-color:  rgba(100,100,100,.1);
 }
 .media-body {
   padding-left: 2em;
 }
 .media{
   border-radius: 15px;
+}
+#formar {
+  width: 40em;
+}
+.row {
+  margin-top: 2em;
 }

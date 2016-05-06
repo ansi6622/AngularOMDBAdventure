@@ -66,7 +66,7 @@
 </nav>
 
 
-<div class="container header-submitPost" ng-show="vs.ToggleMovieForm">
+<div class="container header-submitMovie" ng-show="vs.ToggleMovieForm">
     <h3>Add A New Movie</h3>
 
     <form name="form" novalidate ng-submit="form.$valid && newMovie()">
@@ -75,6 +75,7 @@
                    placeholder="Movie Title"
                    name="title"
                    type="text"
+                   id="formar"
                    class="form-control"
                    minlength="1"
                    maxlength="100"
