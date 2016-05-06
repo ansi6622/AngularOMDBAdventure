@@ -1,14 +1,13 @@
 <div class="comment">
   <button class="btn btn-xs btn-default" ng-click="vs.comments = !vs.comments">
-    <i class="fa fa-comment-o" aria-hidden="true"></i> {{movie.comments.length}}
+    <i class="fa fa-comments-o" aria-hidden="true"></i> {{movie.comments.length}}
     <ng-pluralize count="movie.comments.length" when="{'1': 'Comment', 'other': 'Comments'}"></ng-pluralize>
   </button>
 
   <button class="btn btn-xs btn-default" ng-click="vs.form = !vs.form">
-    <i class="fa fa-pencil" aria-hidden="true"></i>
+    <i class="fa fa-keyboard-o" aria-hidden="true"></i>
     <span>Add Comment</span>
   </button>
-
 
   <ul ng-show="vs.comments" class="comment-ul-wrapper">
     <h3 class="comment-header">Comments</h3>

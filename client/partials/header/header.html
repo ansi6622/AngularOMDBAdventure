@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav id="rounded" class="rounded navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a ng-click="vs.ToggleMovieForm = !vs.ToggleMovieForm"><i class="fa fa-plus"></i> New Movie </a>
+                    <a ng-click="vs.ToggleMovieForm = !vs.ToggleMovieForm"><i class="fa fa-file-movie-o"></i> New Movie </a>
                 </li>
                 <form class="navbar-form navbar-left ng-pristine ng-valid" role="search">
                     <div class="form-group">
@@ -22,7 +22,7 @@
                 </form>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                       Sort by: <b>{{vs.sort || 'votes'}}</b> <span class="caret"></span>
+                       Sort by: <b>{{vs.sort || 'votes'}}</b> <span class="fa fa-stack-overflow"></span>
                     </a>
 
                     <ul class="dropdown-menu">
@@ -44,21 +44,21 @@
 
                 <li>
                   <a href="#" ng-click="vs.order = reverse">
-                    <i ng-class="{'header-active': !vs.order}" class="fa fa-lg fa-chevron-down header-active"></i>
+                    <i ng-class="{'header-active': !vs.order}" class="fa fa-lg fa-caret-down header-active"></i>
                   </a>
                 </li>
 
                 <li>
                     <a href="#" ng-click="vs.order = !reverse">
-                      <i ng-class="{'header-active': vs.order}" class="fa fa-lg fa-chevron-up"></i>
+                      <i ng-class="{'header-active': vs.order}" class="fa fa-lg fa-caret-up"></i>
                     </a>
                 </li>
 
 
                 <li>
                     <a href="#" ng-click="vs.favorites = !vs.favorites">
-                      <i ng-show="vs.favorites" class="fa fa-lg fa-heart header-favorite"></i>
-                      <i ng-show="!vs.favorites" class="fa fa-lg fa-heart-o"></i>
+                      <i ng-show="vs.favorites" class="fa fa-lg fa-diamond header-favorite"></i>
+                      <i ng-show="!vs.favorites" class="fa fa-lg fa-blind fa-spin"></i>
                     </a>
                 </li>
         </div>

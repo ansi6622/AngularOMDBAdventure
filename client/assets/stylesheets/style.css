@@ -1,23 +1,35 @@
-.posts-image {
-  width: 250px;
+.movies-image {
+  width: 20em;
+  border-radius: 15px;
 }
 
-nav {
-  z-index: 1;
+#rounded {
+  margin-right: 2em;
+  margin-left: 2em;
+  border-radius: 15px;
+}
+#roundmovie {
+  margin-right: 2em;
+  margin-left: 2em;
+  border-radius: 15px;
 }
 
-.header-submitPost {
+.lilspaces{
+  margin-bottom: 5em;
+}
+
+.header-submitMovie {
   transition: .15s linear;
   margin-top: -10px;
   margin-bottom: 20px;
   z-index: -1;
 }
 
-.header-submitPost.ng-hide {
+.header-submitMovie.ng-hide {
   transform: translateY(-90%);
 }
 
-.header-active, .header-favorite, .posts-favorite {
+.header-active, .header-favorite, .movies-favorite {
   color: rgb(75, 101, 193);
   opacity: 1;
   cursor: pointer;
@@ -51,4 +63,16 @@ nav {
 
 .btn, .btn:focus {
   outline: none;
+}
+.media-left {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  background-color:  rgba(100,100,100,.1);
+}
+.media-body {
+  padding-left: 2em;
+}
+.media{
+  border-radius: 15px;
 }
