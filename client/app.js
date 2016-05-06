@@ -11,8 +11,8 @@ angular.module('omdbMovieApp').config(function($stateProvider, $urlRouterProvide
                 templateUrl: 'partials/header/header.html',
                 controller: 'HeaderCtrl'
               },
-              'posts': {
-                template: '<posts />'
+              'movies': {
+                template: '<movies />'
               }
           }
         })

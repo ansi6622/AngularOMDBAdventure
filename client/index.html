@@ -13,21 +13,17 @@
     <script src="services/movie.service.js"></script>
   </head>
   <body>
-    <!-- <h2>Hello Wolrs</h2>
-    {{2 + 32}}
     <div ng-controller="HeaderCtrl">
-    <div ui.view="header">
+    <div id="content" class="container">
+      <div class="row">
+        <div ui-view="header"></div>
+        <div ui-view="movies">
+
+        </div>
+        <div ui-view=""></div>
+      </div>
     </div>
   </div>
-    <h3 ng-bind="movies"></h3> -->
-    <div ng-controller="HeaderCtrl">
-  <div id="content" class="container">
-    <div class="row">
-      <div ui-view="header"></div>
-      <div ui-view="movies"></div>
-      <div ui-view=""></div>
-    </div>
-  </div>
-</div>
+
   </body>
 </html>
