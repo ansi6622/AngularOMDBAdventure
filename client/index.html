@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="omdbMovieApp">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OMDB Movie App</title>
+    <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="app.js"></script>
+    <script src="partials/header/header.js"></script>
+    <script src="services/movie.service.js"></script>
   </head>
   <body>
-    <h2>Hello Wolrs</h2>
-    <h1 ng-bind="2 + 9"></h1>
+    <!-- <h2>Hello Wolrs</h2>
+    {{2 + 32}}
+    <div ng-controller="HeaderCtrl">
+    <div ui.view="header">
+    </div>
+  </div>
+    <h3 ng-bind="movies"></h3> -->
+    <div ng-controller="HeaderCtrl">
+  <div id="content" class="container">
+    <div class="row">
+      <div ui-view="header"></div>
+      <div ui-view="movies"></div>
+      <div ui-view=""></div>
+    </div>
+  </div>
+</div>
   </body>
 </html>

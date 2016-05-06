@@ -1,0 +1,34 @@
+<article ng-repeat="movie in filteredMovies = ( MoviesCtrl.data.movies |
+                                              filter:vs.query |
+                                              filter:vs.filterFavorites |
+                                              orderBy:(vs.sort || 'votes'):vs.order )">
+
+    <div class="media well">
+        <div class="media-left">
+            <img class="media-object movies-image" ng-src="{{movie.Poster}}">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading movies-heading">{{movie.Title}}</h4>
+            <p><b style="opacity: .5;">IMDB Rating:</b> {{movie.imdbRating}} <br>
+               <b style="opacity: .5;">Director:</b> {{movie.Director}}</p>
+
+            <rc-vote movie="{id: movie.id, votes: movie.votes}"></rc-vote>
+
+            <i aria-hidden="true" ng-click="movie.favorite = !movie.favorite"
+               ng-class="{ 'fa fa-heart-o': !movie.favorite,
+                           'fa fa-heart movies-favorite': movie.favorite}"></i>
+
+            <p>{{movie.Plot}}</p>
+
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            {{movie.date}}
+
+            <comment></comment>
+        </div>
+    </div>
+
+</article>
+<!-- 
+<div ng-hide="filteredPosts.length > 0">
+  <img ng-src="assets/images/move_along.jpg">
+</div> -->
