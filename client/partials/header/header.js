@@ -7,20 +7,20 @@ angular.module('omdbMovieApp')
             return data.favorite;
         }
 
-        $scope.newPost = function () {
-            var newPost = angular.copy($scope.post);
+        $scope.newMovie = function () {
+            var newMovie = angular.copy($scope.movie);
 
             if ($scope.form.$valid) {
-              movieService.getMovie(newPost.title).then(function(res){
-                $scope.post = {};
+              movieDataService.getMovie(newMovie.title).then(function(res){
+                $scope.movie = {};
                 $scope.form.$setPristine();
                 $scope.form.$setUntouched();
-                movieService.addPost(res.data);
+                movieDataService.addMovie(res.data);
               });
             }
 
             // Hide form
-            $scope.vs.TogglePostForm = false;
+            $scope.vs.ToggleMovieForm = false;
         }
 
   });
