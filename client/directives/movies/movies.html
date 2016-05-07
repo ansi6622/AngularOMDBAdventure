@@ -15,8 +15,8 @@
             <rc-vote movie="{id: movie.id, votes: movie.votes}"></rc-vote>
 
             <i aria-hidden="true" ng-click="movie.favorite = !movie.favorite"
-               ng-class="{ 'fa fa-blind fa-spin': !movie.favorite,
-                           'fa fa-diamond movies-favorite': movie.favorite}"></i>
+               ng-class="{ 'fa fa-blind ': !movie.favorite,
+                           'fa fa-diamond fa-spin movies-favorite': movie.favorite}"></i>
 
             <p ng-bind="movie.Plot"></p>
 
@@ -30,5 +30,6 @@
 </article>
 
 <div ng-hide="filteredMovies.length > 0">
-  <img ng-src="http://www.judicialwatch.org/wp-content/uploads/2014/12/Inside-of-apartment-where-victim-was-shot-2.jpg">
+
+  <img id="fo0fo" class="fadeIn" ng-src="http://www.bitrebels.com/wp-content/uploads/2010/06/LOST-Geography-Map-7.jpg">
 </div>
